@@ -4,18 +4,18 @@ function getEle (id){
    return document.getElementById(id);
 };
 
-function getListGVInfomationApi (){
-    services.getListGVInfomationApi().then(function(result){
-        renderListGVInformationApi (result.data)
+function getListGVInfomationAPI (){
+    services.getListGVInfomationAPI().then(function(result){
+        renderListGVInformationAPI (result.data)
     })
     .catch(function(error){
         console.log(error);
     })
 }
 
-getListGVInfomationApi();
+getListGVInfomationAPI();
 
-function renderListGVInformationApi(data){
+function renderListGVInformationAPI(data){
     var contentHTML = "";
 
     data.forEach(function (GV, index){
@@ -24,7 +24,11 @@ function renderListGVInformationApi(data){
             <td>${index +1}</td>
             <td>${GV.taiKhoan}</td>
             <td>${GV.matKhau}</td>
-            <td>${GV.hoTen}</td>
+            <td>${GV.hoTen}
+            <img class="img-fluid" src="./../../assets/img/${
+              GV.hinhAnh
+            }"  width="50"/>
+            </td>
             <td>${GV.email}</td>
             <td>${GV.ngonNgu}</td>
             <td>${GV.loaiND}</td>
@@ -42,4 +46,43 @@ function renderListGVInformationApi(data){
     });
 
   getEle("tblDanhSachNguoiDung").innerHTML= contentHTML;
+};
+
+function deleteGV(id){
+  services.deleteGVInfomationAPI(id).then(function(){
+    getListGVInfomationAPI();
+  })
+  .catch(function(error){
+    console.log(error);
+  });
+};
+
+getEle("btnThemNguoiDung").onclick = function(){
+  document.getElementsByClassName("modal-title")[0].innerHTML = "Thêm TK";
+
+  var footer = `<button class="btn btn-danger" onclick="addGV()">Add</button>`
+
+  document.getElementsByClassName("modal-footer")[0].innerHTML = footer;
+};
+
+function addGV (){
+  var taiKhoan = getEle("TaiKhoan").value;
+  var hoTen = getEle("HoTen").value;
+  var matKhau = getEle("MatKhau").value;
+  var email = getEle("Email").value;
+  var hinhAnh = getEle("HinhAnh").value;
+  var loaiND = getEle("loaiNguoiDung").value;
+  var ngonNgu = getEle("loaiNgonNgu").value;
+  var moTa = getEle("MoTa").value;
+
+  var GV = new GV ("", taiKhoan, hoTen, matKhau, email, hinhAnh, loaiND, ngonNgu, moTa);
+
+  services.addGVInfomationAPI(GV).then(function(){
+    getListGVInfomationAPI();
+    document.getElementsByClassName("close")[0].click();
+  })
+  .catch(function(error){
+    console.log(error);
+  })
 }
+
