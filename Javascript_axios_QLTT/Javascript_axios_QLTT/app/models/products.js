@@ -1,4 +1,4 @@
-function GV (id, taiKhoan, matKhau, hoTen, email, ngonNgu, loaiND, moTa, hinhAnh ){
+function GV (id, taiKhoan, matKhau, hoTen, email, ngonNgu, loaiND, moTa, hinhAnh){
     this.id = id;
     this.taiKhoan = taiKhoan;
     this.matKhau = matKhau;
