@@ -1,0 +1,31 @@
+.cardTeacher{
+    margin: $pd-1 0;
+    border-radius: 20px;
+    img{
+        border-radius: 15px 15px 0 0;
+    }
+    .card-body{
+        text-align: center;
+        p{
+            @include styleText($fs-10,$fw-1,$color-purple-1);
+        }
+    .card-text{
+        @include styleText($fs-11,$fw-4,$color-dark-2)
+    }
+    }
+}
+
+.cardFindInformation{
+    border-radius: 20px;
+    padding: 80px 50px 50px 50px;
+    // text-align: center;
+    h1{
+        text-align: center;
+        padding: 30px;
+        @include styleText1($fw-5, $color-dark-2)
+    }
+}
+
+// .cardBodyInformation{
+//     padding: 40px 65px 40px;
+// }

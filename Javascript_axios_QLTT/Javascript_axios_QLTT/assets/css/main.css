@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #656774;
+  background-color: #fff;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.cardTeacher {
+  margin: 25px 0;
+  border-radius: 20px;
+}
+
+.cardTeacher img {
+  border-radius: 15px 15px 0 0;
+}
+
+.cardTeacher .card-body {
+  text-align: center;
+}
+
+.cardTeacher .card-body p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #b61883;
+}
+
+.cardTeacher .card-body .card-text {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #121212;
+}
+
+.cardFindInformation {
+  border-radius: 20px;
+  padding: 80px 50px 50px 50px;
+}
+
+.cardFindInformation h1 {
+  text-align: center;
+  padding: 30px;
+  font-weight: 900;
+  color: #121212;
+}
+
+.headerCarousel {
+  position: absolute;
+}
+
+.headerCarousel #collapsibleNavbar .nav-item {
+  margin: 0 50px 0 0;
+}
+
+.headerCarousel #collapsibleNavbar .nav-link {
+  padding: 0 50px;
+}
+
+.OurTeachCarousel {
+  background-image: url(./../../images/images/Violet_top_left_wave.png);
+  padding: 4em 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.OurTeachCarousel h4 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #b61883;
+}
+
+.OurTeachCarousel h1 {
+  font-size: 3.25rem;
+  font-weight: 600;
+  color: #121212;
+}
+
+.Teacher_information {
+  background-image: url(./../../images/images/Wave_White_bottom_right_shape_01.png);
+  background-position: bottom;
+  background-color: #dcd1f0;
+  background-size: cover;
+}
+
+.findInformation {
+  padding-top: 60px;
+}
+/*# sourceMappingURL=main.css.map */

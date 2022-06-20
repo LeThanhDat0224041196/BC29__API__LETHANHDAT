@@ -1,0 +1,13 @@
+.OurTeachCarousel{
+    background-image: url(./../../images/images/Violet_top_left_wave.png);
+    padding: 4em 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    h4{
+        @include styleText($fs-3,$fw-1,$color-purple-1)
+    }
+    h1{
+        @include styleText($fs-9, $fw-2,$color-dark-2 )
+    }
+}
