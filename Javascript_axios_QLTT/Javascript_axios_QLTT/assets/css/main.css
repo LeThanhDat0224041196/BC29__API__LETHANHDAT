@@ -67,7 +67,7 @@ html, body {
 }
 
 .OurTeachCarousel {
-  background-image: url(./../../images/images/Violet_top_left_wave.png);
+  background-image: url(./../../img/Violet_top_left_wave.png);
   padding: 4em 0;
   background-size: contain;
   background-repeat: no-repeat;
@@ -87,7 +87,7 @@ html, body {
 }
 
 .Teacher_information {
-  background-image: url(./../../images/images/Wave_White_bottom_right_shape_01.png);
+  background-image: url(./../../img/Wave_White_bottom_right_shape_01.png);
   background-position: bottom;
   background-color: #dcd1f0;
   background-size: cover;
